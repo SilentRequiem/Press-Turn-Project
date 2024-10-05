@@ -1,4 +1,6 @@
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JWindow;
 
 public class Game {
 
@@ -108,5 +110,27 @@ public class Game {
                 "Intelligence: " + intelligence + "\n" +
                 "Charisma: " + charisma + "\n" +
                 "Agility: " + agility);
+
+
+
+
+
+
+
+
+        //Window setup  
+        JFrame window = new JFrame();
+        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //X to close the window
+        window.setResizable(false); //No streching the window to make it look weird
+        window.setTitle("Press Turn Project");
+
+        GamePanel gamePanel = new GamePanel();
+        window.add(gamePanel);
+        window.pack(); //sets size & layout of subcomponets
+
+        window.setLocationRelativeTo(null); // set on the middle of the screen
+        window.setVisible(true);
+        
+        
     }
 }
