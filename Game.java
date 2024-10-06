@@ -60,7 +60,7 @@ public class Game {
             String input = JOptionPane.showInputDialog(null, "You have " + points + " points to allocate.\n" +
                     "Enter points for Strength (Max for each stat is 5) (current: " + strength + "):");
             int allocatedPoints = Integer.parseInt(input); //parseInt returns a string as an int AND Interger is just a way to use an interger as an object.
-            if (allocatedPoints <= Math.min(5 - strength, points)) { //Math.min: returns the smallest input of the "set".
+            if (allocatedPoints <= Math.min(5 - strength, points) && points != 0) { //Math.min: returns the smallest input of the "set".
                 strength += allocatedPoints;
                 points -= allocatedPoints;
                 //Basically it calcs 5 - strength and tries to compare how much allocatedPoints you have left. Math.min takes the lower number
@@ -74,7 +74,7 @@ public class Game {
             input = JOptionPane.showInputDialog(null, "You have " + points + " points to allocate.\n" +
                     "Enter points for Intelligence (Max for each stat is 5) (current: " + intelligence + "):");
             allocatedPoints = Integer.parseInt(input);
-            if (allocatedPoints <= Math.min(5 - intelligence, points)) {
+            if (allocatedPoints <= Math.min(5 - intelligence, points) && points != 0) {
                 intelligence += allocatedPoints;
                 points -= allocatedPoints;
             } else {
@@ -85,7 +85,7 @@ public class Game {
             input = JOptionPane.showInputDialog(null, "You have " + points + " points to allocate.\n" +
                     "Enter points for Charisma (Max for each stat is 5) (current: " + charisma + "):");
             allocatedPoints = Integer.parseInt(input);
-            if (allocatedPoints <= Math.min(5 - charisma, points)) {
+            if (allocatedPoints <= Math.min(5 - charisma, points) && points != 0) {
                 charisma += allocatedPoints;
                 points -= allocatedPoints;
             } else {
@@ -96,7 +96,7 @@ public class Game {
             input = JOptionPane.showInputDialog(null, "You have " + points + " points to allocate.\n" +
                     "Enter points for Agility (Max for each stat is 5) (current: " + agility + "):");
             allocatedPoints = Integer.parseInt(input);
-            if (allocatedPoints <= Math.min(5 - agility, points)) {
+            if (allocatedPoints <= Math.min(5 - agility, points) && points != 0) {
                 agility += allocatedPoints;
                 points -= allocatedPoints;
             } else {
