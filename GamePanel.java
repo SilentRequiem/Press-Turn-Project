@@ -15,7 +15,8 @@ public class GamePanel extends JPanel {
     
     final int screenWidth = tileSize * maxScreenColumn;
     final int screenHeight = tileSize * maxScreenRow;
-
+    //576 x 384
+    
     //Constructor
     public GamePanel() {
         this.setPreferredSize(new DimensionUIResource(screenWidth, screenHeight)); //Aspect Ratio

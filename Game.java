@@ -113,12 +113,7 @@ public class Game {
 
 
 
-
-
-
-
-
-        //Window setup  
+        //Window setup  (refer to GamePanel.java)
         JFrame window = new JFrame();
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //X to close the window
         window.setResizable(false); //No streching the window to make it look weird
