@@ -95,7 +95,6 @@ public class Game {
 
             input = JOptionPane.showInputDialog(null, "You have " + points + " points to allocate.\n" +
                     "Enter points for Agility (Max for each stat is 5) (current: " + agility + "):");
-            allocatedPoints = Integer.parseInt(input);
             if (allocatedPoints <= Math.min(5 - agility, points) && points != 0) {
                 agility += allocatedPoints;
                 points -= allocatedPoints;
