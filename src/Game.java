@@ -1,6 +1,6 @@
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.ImageIcon;
 
 public class Game {
 
@@ -78,9 +78,9 @@ public class Game {
         window.setResizable(false); // No stretching the window to make it look weird
         window.setTitle("Press Turn Project");
 
-        // Set custom window icon
-        ImageIcon img = new ImageIcon("/Press-Turn-Project/Pictures/IV.png");
-        window.setIconImage(img.getImage()); // Add this line to set the window icon
+        // Set custom window icon using a relative path after moving the Pictures folder into src
+        ImageIcon img = new ImageIcon(Game.class.getResource("/Pictures/IV.png")); // Use the relative path
+        window.setIconImage(img.getImage()); // Set the window icon
 
         // Connect to GamePanel
         GamePanel gamePanel = new GamePanel(); // Create an instance of GamePanel

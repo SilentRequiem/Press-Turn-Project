@@ -38,7 +38,7 @@ public class GamePanel extends JPanel {
         topRightPanel.setOpaque(false); // Transparent panel to blend with the black background
 
         // Load and resize the icon
-        ImageIcon wMoon = new ImageIcon("/Press-Turn-Project/Pictures/IV.png");
+        ImageIcon wMoon = new ImageIcon(GamePanel.class.getResource("/Pictures/moon.png"));
         int iconWidth = 48; // Desired icon width
         int iconHeight = 48; // Desired icon height
         Image resizedImage = wMoon.getImage().getScaledInstance(iconWidth, iconHeight, Image.SCALE_SMOOTH);
